@@ -3,20 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css2?family=Loved+by+the+King&family=Megrim&family=Playpen+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
     <title>Fun Fact Generator</title>
 </head>
 <body>
-    <h1>FUN FACT Generator</h1>
-    <p>Click the button to generate a fun fact!</p>
-    <p id="fact"></p>
-    <form>
-        <button id="gen" onclick="gen()" >Generate</button>
-    </form>
-
-    <script>
-        function gen() {
-            fetch('/gen')
-        }
-    </script>
+    <div class="cont">
+        <h1 class="main-head">FUN FACTs Generator</h1>
+        <div class="head-text">
+            <p class="clk-btn-txt">Click the button to generate a fun fact!</p>
+            <span class="material-symbols-outlined rm-2">
+                arrow_downward
+                </span>
+            <button type="button" onclick="getFact()" id="fact">Get Fun Fact</button>
+        </div>
+        <div class="fact-cont">
+            <p id="fact-txt"></p>
+            <div class="fact-btns" id="fact-btns" style="display: none;">
+                <h4>
+                    Source:
+                </h4>
+                <div class="btn-cont">
+                    <div id="source">
+                        <a href="" target="_blank" rel="noopener noreferrer" id="source_link" class="btn">
+                        Source <span class="material-symbols-outlined">
+                            open_in_new
+                            </span>
+                        </a>
+                    </div>
+                    <div id="share" class="tooltip">
+                        <a onclick="share()" onmouseout="outFunc()" class="btn">
+                            <span class="tooltiptext" id="tipText">
+                                Copy to clipboard
+                            </span>
+                            Share <span class="material-symbols-outlined">
+                                share
+                                </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    <script src="/static/script.js"></script>
 </body>
 </html>
