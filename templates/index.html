@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Fact Generator</title>
+</head>
+<body>
+    <h1>FUN FACT Generator</h1>
+    <p>Click the button to generate a fun fact!</p>
+    <p id="fact"></p>
+    <form>
+        <button id="gen" onclick="gen()" >Generate</button>
+    </form>
+
+    <script>
+        function gen() {
+            fetch('/gen')
+        }
+    </script>
+</body>
+</html>
