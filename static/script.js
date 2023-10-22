@@ -4,6 +4,7 @@ function getFact() {
         if(this.readyState == 4 && this.status == 200) {
             fact = JSON.parse(this.responseText);
             document.getElementById("fact-txt").innerHTML = fact["text"];
+            document.getElementById("fact-txt").style.display = "block";
             document.getElementById("source_link").setAttribute("href", fact["source_url"]);
             document.getElementById("fact-btns").style.display = "block";
             console.log(fact["source_url"])
