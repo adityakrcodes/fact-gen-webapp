@@ -34,6 +34,7 @@ a{
 .cont{
 	width: 90vw;
 	margin: 0 auto;
+	height: 95vh;
 }
 
 .main-head{
@@ -193,16 +194,20 @@ a{
 }
 
 .footer{
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	width: 100vw;
-	text-align: center;
+	height: 5vh;
 	text-decoration: none;
-	position: absolute;
-	bottom: 0;
+	background-color: #4C404F;
+	color: #DDD6F3;
 }
 
 .footer > a{
-	color: #4C404F;
+	color: rgb(228, 173, 241);
 	font-weight: bold;
+	margin: auto 0;
 }
 
 @media screen and (min-width: 768px) {
