@@ -7,6 +7,7 @@ function getFact() {
             document.getElementById("fact-txt").style.display = "block";
             document.getElementById("source_link").setAttribute("href", fact["source_url"]);
             document.getElementById("fact-btns").style.display = "block";
+            document.getElementsByClassName("fact-cont")[0].style.display = "block";
             console.log(fact["source_url"])
         }
     };
